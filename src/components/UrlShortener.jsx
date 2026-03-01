@@ -29,6 +29,7 @@ const UrlShortener = () => {
             return updated;
         });
         setInput('');
+        // do not navigate away; just display the shortened URL in the UI
     };
 
     const handleDeleteHistory = (index) => {
@@ -49,22 +50,22 @@ const UrlShortener = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto mt-16 p-4 bg-white rounded shadow text-gray-800">
+        <div className="max-w-2xl mx-auto mt-16 p-6 bg-[#0f0f0f] rounded shadow text-[#E5E5E5] border border-[#222]">
             <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 <input
                     type="url"
                     placeholder="Enter a URL to shorten"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    className="border px-2 py-2 rounded text-black focus:outline-none focus:ring-1 focus:ring-red-500"
+                    className="border border-[#333] bg-[#141414] px-3 py-2 rounded text-[#E5E5E5] focus:outline-none focus:ring-1 focus:ring-[#E50914]"
                     required
                 />
                 <button
                     type="submit"
-                    className="bg-[#0004ffe8] w-[120px] mx-auto   text-white px-4 py-2 rounded transition duration-300 relative group hover:bg-[#0000cc]"
+                    className="w-35 mx-auto text-white px-4 py-2 rounded relative group bg-transparent border border-transparent hover:border-[#333] transition duration-300"
                 >
                     Shorten
-                    <span className="absolute left-0 bottom-0 w-0 h-[2px]  bg-[#E50914] transition-all duration-300 group-hover:w-full"></span>
+                    <span className="absolute left-0 bottom-0 w-0 h-0.5  bg-[#E50914] transition-all duration-300 group-hover:w-full"></span>
                 </button>
             </form>
 
@@ -72,7 +73,7 @@ const UrlShortener = () => {
                 <div className="mt-4">
                     <p>Your shortened URL:</p>
                     <div className="flex items-center gap-2">
-                        <a href={result} className="text-blue-600 break-all">
+                        <a href={result} className="text-[#E50914] break-all">
                             {result}
                         </a>
                         <button
@@ -104,22 +105,21 @@ const UrlShortener = () => {
                                 <div className="flex-1">
                                     <div className="text-sm">
                                         Original:{' '}
-                                        <a href={item.original} className="text-blue-600">
+                                        <a href={item.original} className="text-[#cbd5e1]">
                                             {item.original}
                                         </a>
                                     </div>
                                     <div className="text-sm">
                                         Short:{' '}
-                                        <a href={item.short} className="text-blue-600">
+                                        <a href={item.short} className="text-[#E50914]">
                                             {item.short}
                                         </a>
                                     </div>
                                 </div>
                                 <button
                                     onClick={() => handleDeleteHistory(i)}
-                                    border border-red-700
-                                    px-4 py-2 rounded-lg
-                                    className="bg-red-600 text-white  hover:bg-red-700  px-2 py-1 rounded-lg" title="Delete this entry"
+                                    className="bg-red-600 text-white hover:bg-red-700 px-4 py-2 rounded-lg"
+                                    title="Delete this entry"
                                 >
                                     Delete
                                 </button>
