@@ -29,7 +29,6 @@ const UrlShortener = () => {
             return updated;
         });
         setInput('');
-        // do not navigate away; just display the shortened URL in the UI
     };
 
     const handleDeleteHistory = (index) => {
@@ -50,14 +49,14 @@ const UrlShortener = () => {
     };
 
     return (
-        <div className="max-w-2xl mx-auto mt-16 p-6 bg-[#0f0f0f] rounded shadow text-[#E5E5E5] border border-[#222]">
+        <div className="max-w-2xl mx-auto mt-16 p-6 bg-[#0f0f0f] border-2 border-red-500 rounded shadow text-[#E5E5E5] border border-[#222]">
             <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 <input
                     type="url"
                     placeholder="Enter a URL to shorten"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    className="border border-[#333] bg-[#141414] px-3 py-2 rounded text-[#E5E5E5] focus:outline-none focus:ring-1 focus:ring-[#E50914]"
+                    className="border border-[#333] bg-[#141414] px-3 py-2 rounded text-white focus:outline-none focus:ring-1 focus:ring-[#E50914]"
                     required
                 />
                 <button
