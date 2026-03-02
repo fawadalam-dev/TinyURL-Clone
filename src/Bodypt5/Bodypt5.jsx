@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./Bodypt5.css";
 
 const faqs = [
   {
@@ -47,40 +46,40 @@ function Bodypt5() {
   };
 
   return (
-    <section className="bodypt5-container">
-      <div className="bodypt5-inner">
-        <div className="bodypt5-left">
-          <h2 className="bodypt5-heading">
+    <section className="bg-[#f8f9fa] w-full py-[50px]">
+      <div className="max-w-[1120px] mx-auto p-[30px_5%] flex gap-16">
+        <div className="flex-[0_0_260px]">
+          <h2 className="text-[1.75rem] font-black leading-[1.3] m-0 mb-3 pt-[150px]">
             Frequently <br /> Asked <br /> Questions
           </h2>
         </div>
 
-        <div className="bodypt5-right">
-          <div className="faq-accordion">
+        <div className="flex-1">
+          <div className="bg-white rounded-lg shadow-[0_10px_30px_rgba(15,23,42,0.06)] border border-[#e5e7eb]">
             {faqs.map((item, index) => {
               const isOpen = openIndex === index;
 
               return (
                 <div
-                  className={`faq-item ${isOpen ? "faq-item-open" : ""}`}
+                  className={`${index !== 0 ? "border-t border-[#e5e7eb]" : ""}`}
                   key={item.question}
                 >
                   <button
                     type="button"
-                    className="faq-trigger"
+                    className="w-full p-[18px_24px] bg-transparent border-none flex items-center justify-between cursor-pointer"
                     onClick={() => handleToggle(index)}
                   >
-                    <span className="faq-question">{item.question}</span>
+                    <span className="text-[0.98rem] font-semibold text-left">{item.question}</span>
                     <span
-                      className={`faq-icon ${isOpen ? "faq-icon-open" : ""}`}
+                      className="relative w-[18px] h-[18px] inline-flex items-center justify-center"
                       aria-hidden="true"
                     >
-                      <span className="faq-icon-line faq-icon-line-vertical" />
-                      <span className="faq-icon-line faq-icon-line-horizontal" />
+                      <span className={`absolute w-[14px] h-0.5 bg-[#6b7280] rounded-full transition-all duration-200 ${isOpen ? "opacity-0" : ""}`} />
+                      <span className="absolute w-[14px] h-0.5 bg-[#6b7280] rounded-full transition-all duration-200" style={{transform: isOpen ? "rotate(0deg)" : "rotate(90deg)", opacity: isOpen ? "0" : "1"}} />
                     </span>
                   </button>
-                  <div className="faq-panel" aria-hidden={!isOpen}>
-                    <p className="faq-answer">{item.answer}</p>
+                  <div className={`overflow-hidden transition-all duration-250 ${isOpen ? "max-h-[200px]" : "max-h-0"}`} aria-hidden={!isOpen}>
+                    <p className="p-[0_24px_18px] text-[0.95rem] leading-[1.6] text-[#4b5563] m-0">{item.answer}</p>
                   </div>
                 </div>
               );

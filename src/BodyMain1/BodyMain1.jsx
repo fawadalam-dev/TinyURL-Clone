@@ -1,86 +1,83 @@
-import "./BodyMain1.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faHighlighter } from "@fortawesome/free-solid-svg-icons";
 
 function BodyMain1() {
   return (
-    <div className="body-part1">
+    <div className="bg-[#002342] h-[550px] text-white py-[6.5rem] px-12 flex justify-between">
       {/* Main Body Left Part */}
-      <div className="body-p-left">
-        <div className="bpl-heading">
+      <div className="my-5 ml-[50px]">
+        <div className="text-[20px] mb-[30px]">
           <h1>
             URL Shortener, Branded <br /> Short Links & Analytics
           </h1>
           <br />
         </div>
 
-        <div className="bpl-paragraph">
-          <p className="bpl-paragraph1">
+        <div className="text-[17.5px] mb-[30px]">
+          <p className="mb-[25px]">
             Welcome to the original link shortener — simplifying the Internet{" "}
             <br />
             through the power of the URL since 2002.
           </p>
 
-          <p className="bpl-paragraph2">
+          <p className="mb-[25px]">
             You can use branded domains for fully custom links, track link
             analytics, <br /> and enjoy other powerful features with our paid
             plans.
           </p>
         </div>
 
-        <div className="bpl-btn">
-          <button className="bpl-btn-plans">View Plans</button>
-          <button className="bpl-btn-account">Create Free Account</button>
+        <div>
+          <button className="text-[16px] h-10 w-[6.8rem] bg-[#dee2e6] rounded px-6 py-2.5 font-medium mr-5 hover:bg-[#dee2e6bb] transition-colors duration-200">View Plans</button>
+          <button className="text-[16px] h-10 w-[11.5rem] bg-[#0d7693] text-white rounded px-6 py-2.5 font-medium hover:bg-[#07637dc5] transition-colors duration-200">Create Free Account</button>
         </div>
 
         {/* Main Body Bottom Part */}
-        <div className="main-body-bottom">
+        <div className="mt-[60px]">
           <h2>Your Recent Links:</h2>
 
-          <div className="recent-links-alert">
-            <i className="fa-solid fa-circle-exclamation alert-icon"></i>
+          <div className="bg-white text-[#1a1a1a] flex items-center p-5 rounded h-[15px] w-[1165px] absolute mt-4 font-semibold text-[15px] shadow-md">
+            <i className="fa-solid fa-circle-exclamation mr-3"></i>
             No links yet in your history
           </div>
         </div>
       </div>
 
       {/* Right side */}
-      <div className="body-p-right">
-        <button className="bpr-shorten-btn">
+      <div className="mr-[60px] mb-5">
+        <button className="h-[50px] w-[250px] bg-[#f8f9fa] rounded-t-md font-semibold">
           <i
-            className="bpr-shorten-btn-icon fa-solid fa-link"
+            className="fa-solid fa-link mr-2"
             style={{ color: "#000000" }}
           ></i>
           Shorten a Link
         </button>
-        <button className="bpr-qr-btn">
+        <button className="h-[50px] w-[250px] bg-[#0d7693] text-white rounded-t-md font-semibold">
           <i
-            className="bpr-qr-btn-icon fa-solid fa-qrcode"
-            style={{ color: "rgb(0, 0, 0)" }}
+            className="fa-solid fa-qrcode mr-2"
+            style={{ color: "#000000" }}
           ></i>
           Generate QR Code
         </button>
 
         {/* Rightside Box */}
-        <div className="Rightside-box">
+        <div className="h-[341px] w-[500px] bg-[#f8f9fa] rounded-b-md">
           <form
-            className="body-p-right-form"
+            className="w-full"
             onSubmit={(e) => e.preventDefault()}
           >
             {/* Input 1 */}
-            <div className="bpr-form-input1">
-              <label className="bpr-form-label" htmlFor="user-url">
+            <div>
+              <label className="text-black font-semibold text-[13.5px] my-[15px] ml-[22px] block" htmlFor="user-url">
                 <i
-                  className="bpr-form-label-icon fa-solid fa-location-arrow"
-                  style={{ color: "rgb(0, 0, 0)" }}
+                  className="fa-solid fa-location-arrow mr-2"
+                  style={{ color: "#000000" }}
                 ></i>
                 Long URL
               </label>
-              <br />
               <input
-                className="bpr-form-input"
+                className="h-7 w-[450px] border border-black/[0.272] rounded-sm mx-0 my-1 ml-[22px] font-semibold"
                 type="text"
                 name="user-rule"
                 id="user-url"
@@ -88,20 +85,18 @@ function BodyMain1() {
                 required
               />
             </div>
-            <br />
-            <div className="bottom-input">
-              <div className="bpr-form-p2">
-                <label className="bpr-form-label" htmlFor="bpr-form-select1">
+            <div className="flex">
+              <div>
+                <label className="text-black font-semibold text-[13.5px] my-[15px] ml-[22px] block" htmlFor="bpr-form-select1">
                   <FontAwesomeIcon
-                    className="bpr-form-label-icon"
+                    className="mr-2"
                     icon={faGlobe}
-                    style={{ color: "rgb(0, 0, 0)" }}
+                    style={{ color: "#000000" }}
                   />
                   Domain
                 </label>
-                <br />
                 <select
-                  className="bpr-form-select"
+                  className="text-black h-[30px] w-[200px] border border-black/[0.272] rounded-sm ml-[22px] mb-3 font-medium"
                   name="bpr-form-select1"
                   id="bpr-form-select1"
                 >
@@ -109,36 +104,33 @@ function BodyMain1() {
                   <option value="theahsan.com">theahsan.com</option>
                 </select>
               </div>
-              <div className="bpr-form-p2-input2">
-                <label className="bpr-form-label" htmlFor="alias-url">
+              <div>
+                <label className="text-black font-semibold text-[13.5px] my-[15px] ml-[22px] block" htmlFor="alias-url">
                   <FontAwesomeIcon
-                    className="bpr-form-label-icon"
+                    className="mr-2"
                     icon={faHighlighter}
-                    style={{ color: "rgb(0, 0, 0)" }}
+                    style={{ color: "#000000" }}
                   />
                   Alias (optional)
                 </label>
-                <br />
                 <input
-                  className="bpr-form-input2"
+                  className="h-[25px] w-[200px] border border-black/[0.272] rounded-sm ml-[22px] font-medium"
                   type="text"
                   name="alias-rule"
                   id="alias-url"
                   placeholder="Add alias here"
                   required
                 />
-                <br />
-                <label className="bpr-form-4" htmlFor="alias-url">
+                <label className="text-black text-[11.5px] italic ml-[22px] mt-2 block" htmlFor="alias-url">
                   Must be at least 5 characters
                 </label>
               </div>
             </div>
           </form>
-          <button type="submit" className="bpr-form-submit-btn">
+          <button type="submit" className="h-[38px] w-[458px] bg-[#1f8244] text-white rounded-sm ml-[22px] my-[35px] font-semibold text-base hover:bg-[#186334] transition-colors">
             Shorten Link
           </button>
-          <br />
-          <p className="bpr-form-p-terms">
+          <p className="text-black text-[11.5px] italic ml-[22px] mt-2">
             By clicking Shorten Link, you agree with our Terms of Service,
             Privacy Policy, <br /> and Use of Cookies.
           </p>

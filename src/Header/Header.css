@@ -1,7 +1,7 @@
-/* NavBar */
+
 .navbar-container {
   margin: 0;
-  background: linear-gradient(to right, #0c6b87, #012543);
+  background: linear-gradient(to right, #21b5e2, #012543);
   border: none;
   position: sticky;
   top: 0px;
