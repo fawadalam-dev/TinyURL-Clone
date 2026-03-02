@@ -1,0 +1,45 @@
+.start-footer{
+    background-color: #002342;
+    height: 280px;
+    width: 100%;
+}
+.heading{
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 35px;
+}
+.para{
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 28px;
+}
+.footer-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+}
+.btn1{
+    height: 40px;
+    width: 110px;
+    margin-right: 30px;
+    border-radius: 5px;
+    color:#212529;
+    border: none;
+}
+.btn2{
+    height: 40px;
+    width: 165px;
+    border-radius: 5px;
+    background-color: #07637D;
+    color: white;
+    border: none;
+}

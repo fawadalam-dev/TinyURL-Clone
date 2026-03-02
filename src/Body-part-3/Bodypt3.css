@@ -1,0 +1,67 @@
+/* Main Body Div */
+.body-part-3 {
+  height: 480px;
+  margin: 0px;
+  display: flex;
+  background-color: #0d7693;
+  justify-content: space-evenly;
+}
+
+.body-part-3 h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.body-part-3-right p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 20px;
+  line-height: 24px;
+}
+
+/* Body Right Part Texts */
+
+.body-part-3-right {
+  margin: 80px;
+}
+
+/* Buttons */
+
+.body-part-3-right-buttons {
+  margin-top: 25px;
+  display: flex;
+}
+
+.body-part-3-right-plans {
+  font-size: 16px;
+  height: 2.5rem;
+  width: 6.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #dee2e6;
+  margin-right: 1.2rem;
+  font-weight: 500;
+}
+.body-part-3-right-plans:hover {
+  background-color: #dee2e6bb;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.body-part-3-right-contact {
+  font-size: 16px;
+  height: 2.5rem;
+  width: 8.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #002342;
+  color: white;
+  font-weight: 500;
+}
+.body-part-3-right-contact:hover {
+  background-color: #212529;
+  transition: all 0.2s;
+  cursor: pointer;
+}

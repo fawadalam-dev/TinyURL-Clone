@@ -1,0 +1,76 @@
+/* NavBar */
+.navbar-container {
+  margin: 0;
+  background: linear-gradient(to right, #0c6b87, #012543);
+  border: none;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  padding-left: 5.5rem;
+}
+
+.nav-logo {
+  height: 50px;
+  width: 160px;
+  padding-right: 20px;
+}
+
+.nav-plans {
+  font-size: 1rem;
+  color: white;
+  padding: 2rem;
+}
+
+.nav-features {
+  font-size: 1rem;
+  color: white;
+  padding: 2rem;
+}
+
+.nav-domains {
+  font-size: 1rem;
+  color: white;
+  padding: 2rem;
+}
+
+.nav-resources {
+  font-size: 1rem;
+  color: white;
+  padding: 2rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 8rem;
+}
+
+.nav-login {
+  font-size: 1rem;
+  color: white;
+}
+
+.nav-signup {
+  color: white;
+  font-size: 1rem;
+  background-color: #0d7693;
+  border: none;
+  border-radius: 5px;
+  margin: 1rem;
+  height: 40px;
+  width: 100px;
+}
+
+.nav-signup:hover {
+  transform: scale(1.05, 1.05);
+  transition: all 0.3s;
+}

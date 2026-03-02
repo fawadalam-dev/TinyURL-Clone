@@ -1,0 +1,53 @@
+.footer {
+  background: linear-gradient(to right, #0c6b87, #012543);
+  height: 470px;
+  width: 100%;
+}
+.footer-list {
+  display: flex;
+  justify-content: space-evenly;
+  height: 350px;
+  width: 70%;
+  padding-left: 0px;
+}
+.footer-list p {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+}
+.footer-list a {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  display: block;
+  padding: 10px;
+}
+.footer-list ul {
+  margin-top: 65px;
+}
+
+img {
+  height: 70px;
+  width: 200px;
+  padding-top: 10px;
+  display: flex;
+  
+}
+.footer-icons p {
+  color: white;
+  
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer-icons svg{
+  
+  padding: 6px;
+  padding-top: 260px;
+}
+.footer-icons{
+  text-align: right;
+  padding-right: 40px;
+}

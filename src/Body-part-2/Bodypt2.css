@@ -1,0 +1,46 @@
+.bodypt2-body {
+  background-color: #ffffff;
+  height: 500px;
+  width: 100%;
+}
+.bodypt2-heading {
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0px 20px 0px;
+  color: #212529;
+}
+
+/* CARDs */
+.bodypt2-card {
+  height: 385px;
+  width: 260px;
+}
+.bodypt2-card-h1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.bodypt2-card img {
+  height: 196px;
+  width: 180px;
+  padding-top: 30px;
+  padding-left: 23px;
+}
+
+.bodypt2-card img:hover {
+  transform: scale(1.2, 1.2);
+  transition: transform 0.4s ease-in-out;
+}
+.bodypt2-para {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.bodypt2-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
