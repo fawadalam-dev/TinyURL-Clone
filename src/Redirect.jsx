@@ -10,8 +10,8 @@ function Redirect() {
     if (longUrl) {
       window.location.href = longUrl;
     } else {
-      // Handle not found
       alert('Short URL not found');
+      window.location.href = '/';
     }
   }, [code]);
 

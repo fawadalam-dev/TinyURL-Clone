@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faHighlighter } from "@fortawesome/free-solid-svg-icons";
+import './BodyMain1.css';
 
 function BodyMain1() {
   const [longUrl, setLongUrl] = useState('');
@@ -28,7 +29,7 @@ function BodyMain1() {
     links[code] = longUrl;
     localStorage.setItem('shortLinks', JSON.stringify(links));
 
-    const newShortUrl = `http://localhost:5174/${code}`;
+    const newShortUrl = `${window.location.origin}/${code}`;
     setShortUrl(newShortUrl);
 
     const recents = JSON.parse(localStorage.getItem('recentLinks') || '[]');
@@ -109,6 +110,12 @@ function BodyMain1() {
         {shortUrl && (
           <div className="short-url">
             Short URL: <a href={shortUrl} target="_blank" rel="noopener noreferrer">{shortUrl}</a>
+            <button 
+              onClick={() => navigator.clipboard.writeText(shortUrl).then(() => alert('Copied!'))} 
+              className="copy-btn"
+            >
+              Copy
+            </button>
           </div>
         )}
       </div>
